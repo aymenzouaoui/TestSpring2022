@@ -2,6 +2,7 @@ package com.example.springrevision45.controller;
 
 import com.example.springrevision45.entities.Livre;
 import com.example.springrevision45.services.iLivreService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +12,9 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/livre")
+@RequestMapping("livre")
+@Tag(name = "LivrelManagement", description = "Endpoints for managing Livre")
+
 public class LivreController {
 
     private final iLivreService livreService;
